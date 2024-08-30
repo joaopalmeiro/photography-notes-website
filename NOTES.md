@@ -115,6 +115,12 @@
 - Nuxt Content:
   - https://content.nuxt.com/usage/markdown#images
   - https://content.nuxt.com/usage/content-directory
+- https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#format-selection
+- https://www.ryanmr.com/posts/convert-webm-to-mp4-with-ffmpeg
+- https://gist.github.com/jaydenseric/220c785d6289bcfd7366
+- https://evilmartians.com/chronicles/better-web-video-with-av1-codec
+- https://www.peterbe.com/plog/fastest-way-to-take-screencaps-out-of-videos
+- https://gist.github.com/peterbe/420521a081f4ecf48109
 
 ## Snippets
 
@@ -524,4 +530,20 @@ rm -rf node_modules/ && npm install
 
 ```bash
 npx prettier . --check --log-level debug
+```
+
+```bash
+yt-dlp --list-formats "https://youtu.be/kSlrgo9bEzU"
+```
+
+```bash
+yt-dlp --format "bestvideo*" "https://youtu.be/kSlrgo9bEzU"
+```
+
+```bash
+yt-dlp --format "bestvideo*[ext=mp4]" "https://youtu.be/pWTIAoY29cc"
+```
+
+```bash
+ffmpeg -ss 00:00:39 -i "Autonomia Digital EP1 [pWTIAoY29cc].webm" -vframes 1 cover.jpg
 ```
